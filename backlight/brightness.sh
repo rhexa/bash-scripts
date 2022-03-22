@@ -12,7 +12,7 @@ bUp(){
     if [ $current -eq $max ]
     then
         echo "You reached the max limit"
-        exit
+        return
     fi
 
     local -i val=$current+$step
@@ -28,7 +28,7 @@ bDown(){
     if [ $current -eq $min ]
     then
         echo "You reached the min limit"
-        exit
+        return
     fi
 
     local -i val=$current-$step
